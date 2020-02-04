@@ -23,4 +23,57 @@ body {
   display: none;
 }
 
+.btn__lila {
+  background-color: var(--lila);
+  color: white;
+}
+
+h1 {
+  color: var(--lila);
+}
+
 /*-------------- HEADER ---------------*/
+
+.header {
+}
+
+.header__title {
+}
+
+.header__subtitle {
+  color: var(--donkerlila);
+}
+
+.header__nav {
+}
+
+.header__navlink {
+  color: var(--lila);
+  text-decoration: none;
+  border-bottom: 0.2rem solid var(--lila);
+}
+
+/*------------ OVER CONNEXT --------------*/
+
+.overconnext {
+}
+
+/*---------- TRACK & TRACE --------*/
+
+.tracktrace {
+}
+
+/*---------- EUROMETROPOOL --------*/
+
+.eurometropool {
+}
+
+/*---------- WEETJES --------*/
+
+.weetjes {
+}
+
+/*------------ OVER NEXT --------------*/
+
+.overnext {
+}

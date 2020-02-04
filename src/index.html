@@ -7,20 +7,30 @@
     <title>CONNEXT</title>
   </head>
   <body>
-    <header>
-      <h1>CONNEXT</h1>
-      <p>Vertel, verstuur, beantwoord!</p>
-      <p>
-        Binnen de <a href="#">Eurometropool</a> barst het van mensen die iets te
-        vertellen hebben! Ben je benieuwd wat? Kom het te weten via tal van
-        <a href="#">interactieve installaties</a> in uw buurt, leer je
-        medeburgers van net over de grens kennen, stuur hen een kaartje en
-        <a href="#">blijf dit kaartje op de voet volgen!</a>
+    <header class="header">
+      <div class="header__lang">
+        <a class="lang__nl" href="#">NL</a>
+        <a href="lang__fr">FR</a>
+      </div>
+      <h1 class="header__title">CONNEXT</h1>
+      <p class="header__subtitle">
+        Dé brievenbus die een antwoord geeft op al jouw vragen!
       </p>
-      <a href="">Track and Trace</a>
+      <p class="header__nav">
+        Binnen de <a class="header__navlink" href="#">Eurometropool</a> barst
+        het van mensen die iets te vertellen hebben! Ben je benieuwd wat? Kom
+        het te weten via tal van
+        <a class="header__navlink" href="#">interactieve installaties</a> in uw
+        buurt, leer je medeburgers van net over de grens kennen, stuur hen een
+        kaartje en
+        <a class="header__navlink" href="#"
+          >blijf dit kaartje op de voet volgen!</a
+        >
+      </p>
+      <a class="btn__lila" href="#">Track and Trace</a>
     </header>
     <main>
-      <section>
+      <section class="overnext">
         <h2>Over CONNEXT</h2>
         <img src="#" alt="CONNEXT Foto 1" />
         <img src="#" alt="CONNEXT Foto 2" />
@@ -37,7 +47,8 @@
         </p>
         <a href="#">Bekijk hier de locaties</a>
       </section>
-      <section>
+
+      <section class="tracktrace">
         <h2>Waar is mijn verzonden kaartje?</h2>
         <p>Jouw kaartje bevindt zich momenteel binnen de Eurometropool.</p>
         <p>
@@ -46,10 +57,11 @@
         </p>
         <form action="">
           <input type="text" placeholder="Uw unieke code..." />
-          <input type="submit" />
+          <input type="submit" value="Kaartje zoeken" />
         </form>
       </section>
-      <section>
+
+      <section class="eurometropool">
         <h2>Wat is de Eurometropool</h2>
         <img src="#" alt="Kaartje Eurometropool" />
         <p>
@@ -61,18 +73,13 @@
           meer over elkaars leefwereld te weten te komen, om zo over de land- en
           taalbarrières te kunnen kijken.
         </p>
-        <a href="#">Bezoek de website</a>
+        <a href="#">Lees meer op de Eurometropolis website</a>
       </section>
-      <section>
-        <h2>Wat hebben de burgers van de Eurometropool te vertellen?</h2>
-        <ul>
-          <li>a</li>
-          <li>b</li>
-          <li>c</li>
-        </ul>
-      </section>
-      <section>
-        <h2>Over CONNEXT</h2>
+
+      <section class="weetjes"></section>
+
+      <section class="overnext">
+        <h2>Over NEXT Festival</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et
           rutrum ipsum, et rhoncus orci. Nunc pulvinar, enim vitae viverra
@@ -82,20 +89,19 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et
           rutrum ipsum, et rhoncus orci. Nunc pulvinar, enim vitae viverra
         </p>
-        <a href="#">Ontdek meer over NEXT</a>
-      </section>
-      <section>
-        <h2>Vind een installatie</h2>
+        <a href="#">Lees meer over NEXT Festival</a>
       </section>
     </main>
-    <footer>
-      <div>
+
+    <footer class="footer">
+      <div class="footer__map"></div>
+      <div class="footer__about">
         <h3>CONNEXT</h3>
         <p>
           is een initiatief van vzw NEXT Kortrijk in opdracht van Devine KASK
         </p>
       </div>
-      <div>
+      <div class="footer__contact">
         <h3>Contact</h3>
         <p>
           Kapucijnenstraat 10<br />
@@ -104,14 +110,24 @@
           056/221001
         </p>
       </div>
-      <div>
+      <div class="footer__sponsors">
         <h3>Sponsors</h3>
+        <ul>
+          <li><img src="" alt="sponsor" /></li>
+          <li><img src="" alt="sponsor" /></li>
+          <li><img src="" alt="sponsor" /></li>
+          <li><img src="" alt="sponsor" /></li>
+          <li><img src="" alt="sponsor" /></li>
+          <li><img src="" alt="sponsor" /></li>
+          <li><img src="" alt="sponsor" /></li>
+          <li><img src="" alt="sponsor" /></li>
+        </ul>
       </div>
       <ul>
-        <li>© 2020</li>
         <li><a href="#">Disclaimer</a></li>
         <li><a href="#">Privacyverklaring</a></li>
         <li><a href="#">Cookie policy</a></li>
+        <li><a href="#">Bachelorproef - © 2020</a></li>
       </ul>
     </footer>
   </body>
