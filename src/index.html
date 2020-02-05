@@ -10,8 +10,13 @@
     <header class="header">
       <div class="header__lang">
         <a class="lang__nl" href="#">NL</a>
-        <a href="lang__fr">FR</a>
+        <a class="lang__fr" href="#">FR</a>
       </div>
+      <img
+        class="header__img"
+        src="./assets/img/postbus.png"
+        alt="postbus voorlopig"
+      />
       <h1 class="header__title">CONNEXT</h1>
       <p class="header__subtitle">
         Dé brievenbus die een antwoord geeft op al jouw vragen!
@@ -27,14 +32,26 @@
           >blijf dit kaartje op de voet volgen!</a
         >
       </p>
-      <a class="btn__lila" href="#">Waar is mijn kaartje?</a>
+      <a class="header__btn btn__lila" href="#"
+        >Waar is mijn kaartje?<span></span
+      ></a>
     </header>
+
     <main>
-      <section class="overnext">
-        <h2>Over <span class="title-highlight">CONNEXT</span></h2>
-        <img src="#" alt="CONNEXT Foto 1" />
-        <img src="#" alt="CONNEXT Foto 2" />
-        <p>
+      <section class="overconnext">
+        <h2 class="overconnext__title">
+          Over <span class="title-highlight">CONNEXT</span>
+        </h2>
+        <div class="overconnext__fotos">
+          <img
+            src="./assets/img/overconnext/groenkaartje.png"
+            alt=""
+            width="600"
+            height="400"
+          />
+          <img src="#" alt="" />
+        </div>
+        <p class="overconnext__text">
           CONNEXT is een project dat via
           <strong>interactieve installaties</strong> de mensen binnen de
           Eurometropool nauwer met elkaar wil verbinden. Via
@@ -43,50 +60,71 @@
           metropool insturen. Tot je postkaartje weer terug bij jou terechtkomt,
           kan je met een <strong>unieke code</strong> het traject volgen via
           deze website.
+          <br />
+          <br />
+          <strong
+            >De installaties zijn te vinden in cultuurhuizen, op evenementen en
+            op openbare plaatsen binnen de Eurometropool.</strong
+          >
         </p>
-        <p>
-          De installaties zijn te vinden in cultuurhuizen, op evenementen en op
-          openbare plaatsen binnen de Eurometropool.
-        </p>
-        <a class="btn__groen" href="#">Bekijk hier de locaties</a>
+        <a class="overconnext__btn btn__groen" href="#"
+          >Bekijk hier waar de installaties staan<span></span
+        ></a>
       </section>
 
       <section class="tracktrace">
-        <h2>Waar is mijn verzonden kaartje?</h2>
+        <h2 class="tracktrace__title">Waar is mijn verzonden kaartje?</h2>
         <p>
           Jouw kaartje bevindt zich momenteel binnen de
           <strong>Eurometropool</strong>.
-        </p>
-        <p>
+          <br />
           Voer hier de <strong>unieke code</strong> in die je ontving bij het
           versturen van je kaartje en ontdek het traject van uw kaartje via de
           <strong>track and trace</strong>.
         </p>
         <form action="">
-          <input type="text" placeholder="Uw unieke code..." />
+          <input class="code-input" type="text" />
           <input type="submit" value="Kaartje zoeken" />
         </form>
       </section>
 
       <section class="eurometropool">
-        <h2>Wat is de <span class="title-highlight">Eurometropool</span></h2>
-        <img src="#" alt="Kaartje Eurometropool" />
-        <p>
+        <h2 class="eurometropool__title">
+          Wat is de <span class="title-highlight">Eurometropool?</span>
+        </h2>
+        <img
+          class="eurometropool__img"
+          src="./assets/img/Illustratie.png"
+          alt="Kaartje Eurometropool"
+        />
+        <p class="eurometropool__text">
           De Eurometropool is een grensoverschrijdende samenwerking tussen de
-          regio’s van <strong>Kortrijk, Lille, Doornik en Valenciennes</strong>.
-          Deze samenwerking wordt ondersteund door <strong>NEXT</strong>, een
+          regio’s van
+          <strong>Kortrijk, Lille, Doornik en Valenciennes</strong>. Deze
+          samenwerking wordt ondersteund door <strong>NEXT</strong>, een
           jaarlijks kunstenfestival dat in elke regio plaatsvindt. Met CONNEXT
           krijgen mensen uit de verschillende regio’s de kans om op een leuke
           manier meer over elkaars leefwereld te weten te komen, om zo over de
           land- en taalbarrières te kunnen kijken.
         </p>
-        <a href="#">Lees meer op de Eurometropolis website</a>
+        <a class="eurometropool__btn btn__lila" href="#"
+          >Lees meer op de Eurometropolis website<span></span
+        ></a>
       </section>
 
-      <section class="weetjes"></section>
+      <section class="weetjes">
+        <div class="weetjes__envelop">
+          <h2 class="envelop__title">
+            Wat hebben de burgers van de Eurometropool te vertellen?
+          </h2>
+        </div>
+        <div class="weetjes__kaartje"></div>
+      </section>
 
       <section class="overnext">
-        <h2>Over <span class="title-highlight">NEXT Festival</span></h2>
+        <h2 class="overnext__title">
+          Over <span class="title-highlight">NEXT Festival</span>
+        </h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et
           rutrum ipsum, et rhoncus orci. Nunc pulvinar, enim vitae viverra
@@ -96,7 +134,9 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et
           rutrum ipsum, et rhoncus orci. Nunc pulvinar, enim vitae viverra
         </p>
-        <a href="#">Lees meer over NEXT Festival</a>
+        <a class="overnext__btn btn__lila" href="#"
+          >Lees meer over NEXT Festival<span></span
+        ></a>
       </section>
     </main>
 
@@ -105,36 +145,48 @@
       <div class="footer__about">
         <h3>CONNEXT</h3>
         <p>
-          is een initiatief van vzw NEXT Kortrijk in opdracht van Devine KASK
+          is een initiatief van vzw NEXT Kortrijk<br />
+          in samenwerking met Devine KASK
         </p>
+      </div>
+      <div class="footer__social">
+        <a href="">Facebook</a>
+        <a href="">Instagram</a>
       </div>
       <div class="footer__contact">
         <h3>Contact</h3>
         <p>
-          Kapucijnenstraat 10<br />
-          8500 Kortrijk<br />
+          <strong
+            >Kapucijnenstraat 10<br />
+            8500 Kortrijk<br
+          /></strong>
           info@nextfestival.eu<br />
           056/221001
         </p>
       </div>
-      <div class="footer__sponsors">
-        <h3>Sponsors</h3>
-        <ul>
-          <li><img src="" alt="sponsor" /></li>
-          <li><img src="" alt="sponsor" /></li>
-          <li><img src="" alt="sponsor" /></li>
-          <li><img src="" alt="sponsor" /></li>
-          <li><img src="" alt="sponsor" /></li>
-          <li><img src="" alt="sponsor" /></li>
-          <li><img src="" alt="sponsor" /></li>
-          <li><img src="" alt="sponsor" /></li>
-        </ul>
-      </div>
-      <ul>
+      <ul class="footer__sponsors">
+        <li>
+          <img src="./assets/img/sponsors/nextfestival.png" alt="sponsor" />
+        </li>
+        <li>
+          <img src="./assets/img/sponsors/eurometropool.png" alt="sponsor" />
+        </li>
+        <li><img src="./assets/img/sponsors/fwb.png" alt="sponsor" /></li>
+        <li><img src="./assets/img/sponsors/mel.png" alt="sponsor" /></li>
+        <li><img src="./assets/img/sponsors/hauts.png" alt="sponsor" /></li>
+        <li><img src="./assets/img/sponsors/devine.png" alt="sponsor" /></li>
+        <li>
+          <img src="./assets/img/sponsors/vlaanderen.png" alt="sponsor" />
+        </li>
+        <li>
+          <img src="./assets/img/sponsors/valenciennes.png" alt="sponsor" />
+        </li>
+      </ul>
+      <ul class="footer__links">
         <li><a href="#">Disclaimer</a></li>
         <li><a href="#">Privacyverklaring</a></li>
         <li><a href="#">Cookie policy</a></li>
-        <li><a href="#">Bachelorproef - © 2020</a></li>
+        <li>Bachelorproef - © 2020</li>
       </ul>
     </footer>
   </body>

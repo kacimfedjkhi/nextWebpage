@@ -17,6 +17,16 @@ html {
 /* stylelint-enable */
 
 @font-face {
+  font-family: Aracne Condensed;
+  src: url("./assets/fonts/aracne-condensed/aracne-condensed-regular.woff2")
+      format("woff2"),
+    url("./assets/fonts/aracne-condensed/aracne-condensed-regular.woff")
+      format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
   font-family: Nunito;
   src: url("./assets/fonts/nunito/nunito-regular.woff2") format("woff2"),
     url("./assets/fonts/nunito/nunito-regular.woff") format("woff");
@@ -62,22 +72,19 @@ body {
   background-color: var(--lila);
   color: white;
   text-decoration: none;
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 
 .btn__groen {
   background-color: var(--groen);
   color: white;
   text-decoration: none;
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 
 p {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: normal;
-}
-
-a {
 }
 
 strong {
@@ -85,7 +92,7 @@ strong {
 }
 
 section {
-  padding: 5rem 0;
+  padding: 5rem;
 }
 
 h1 {
@@ -107,19 +114,72 @@ h2 {
 
 .header {
   background-color: var(--donkergrijs);
+  display: grid;
+  height: 100vh;
+  grid-area: 2rem;
+  grid-template-columns: 55% 55rem auto;
+  grid-template-rows: 5rem repeat(5, auto) 15rem;
+  grid-template-areas:
+    "img . ."
+    "img . lang"
+    "img title ."
+    "img subtitle ."
+    "img nav ."
+    "img btn ."
+    "img . .";
 }
 
 .header__title {
+  grid-area: title;
+}
+
+.header__lang {
+  grid-area: lang;
+  font-family: "Aracne Condensed";
+  font-size: 2.8rem;
+}
+
+.lang__nl {
+  background: url("./assets/img/buttons/lang_nl.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 8.5rem;
+  height: 6rem;
+  padding: 2.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+.lang__fr {
+  background: url("./assets/img/buttons/lang_fr.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 8.5rem;
+  height: 6rem;
+  padding: 2.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+.header__img {
+  grid-area: img;
+  height: 70rem;
+  justify-self: center;
+  align-self: center;
 }
 
 .header__subtitle {
+  grid-area: subtitle;
   color: var(--donkerlila);
-  font-size: 3rem;
+  font-size: 2.6rem;
   font-weight: var(--bold);
 }
 
 .header__nav {
-  font-size: 2.4rem;
+  grid-area: nav;
+  font-size: 2rem;
   /* width: 56rem; */
   font-weight: var(--semibold);
 }
@@ -130,26 +190,188 @@ h2 {
   border-bottom: 0.2rem solid var(--lila);
 }
 
+.header__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: btn;
+  background: url("./assets/img/buttons/headerbutton.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  width: 35rem;
+  height: 7rem;
+}
+
+.header__btn span {
+  background: url("./assets/img/buttons/pijltje_wit.png");
+  height: 2rem;
+  width: 3rem;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-left: 2rem;
+}
+
 /*------------ OVER CONNEXT --------------*/
 
 .overconnext {
   background-color: var(--lichtgrijs);
+  display: grid;
+  grid-template-columns: 1fr 66rem 66rem 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    ". title fotos ."
+    ". text fotos ."
+    ". btn fotos .";
+}
+
+.overconnext strong {
+  color: var(--donkergroen);
+}
+
+.overconnext__title {
+  grid-area: title;
+  color: var(--groen);
+}
+
+.overconnext .title-highlight {
+  color: var(--donkergroen);
+}
+
+.overconnext__fotos {
+  grid-area: fotos;
+}
+
+.overconnext__text {
+  grid-area: text;
+  width: 60rem;
+}
+
+.overconnext__btn {
+  grid-area: btn;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("./assets/img/buttons/overconnextbutton.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  width: 46rem;
+  height: 7rem;
+}
+
+.overconnext__btn span {
+  background: url("./assets/img/buttons/pijltje_wit.png");
+  height: 2rem;
+  width: 3rem;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-left: 2rem;
 }
 
 /*---------- TRACK & TRACE --------*/
 
 .tracktrace {
+  height: 50rem;
   background-color: var(--lila);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.tracktrace__title {
+  color: white;
+}
+
+.code-input {
+  width: 20rem;
+  height: 5rem;
+  background-color: rgb(255, 255, 255, 25%);
+  border: none;
+  border-bottom: 0.3rem solid white;
+  font-size: 2.8rem;
+  color: white;
+  text-align: center;
 }
 
 /*---------- EUROMETROPOOL --------*/
 
 .eurometropool {
+  position: relative;
+  height: 55rem;
+  padding-left: 5rem;
+}
+
+.eurometropool__title {
+  color: var(--lila);
+}
+
+.eurometropool__title .title-highlight {
+  color: var(--donkerlila);
+}
+
+.eurometropool__img {
+  width: 65rem;
+  position: absolute;
+  right: 15rem;
+  bottom: 10rem;
+}
+
+.eurometropool__text {
+  width: 60rem;
+}
+
+.eurometropool__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("./assets/img/buttons/eurometropoolbutton.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  width: 52rem;
+  height: 7rem;
+}
+
+.eurometropool__btn span {
+  background: url("./assets/img/buttons/pijltje_wit.png");
+  height: 2rem;
+  width: 3rem;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-left: 2rem;
 }
 
 /*---------- WEETJES --------*/
 
 .weetjes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.weetjes__envelop {
+  background: url("./assets/img/weetjes/envelop.png");
+  width: 70rem;
+  height: 70rem;
+  background-size: 90%;
+  background-repeat: no-repeat;
+}
+
+.envelop__title {
+  color: white;
+}
+
+.weetjes__kaartje {
+  background: url("./assets/img/weetjes/kaartje.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 70rem;
+  height: 46rem;
 }
 
 /*------------ OVER NEXT --------------*/
@@ -157,8 +379,103 @@ h2 {
 .overnext {
 }
 
+.overnext__title {
+  color: var(--lila);
+}
+
+.overnext__title .title-highlight {
+  color: var(--donkerlila);
+}
+
+.overnext__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("./assets/img/buttons/overnextbutton.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  width: 42rem;
+  height: 7rem;
+}
+
+.overnext__btn span {
+  background: url("./assets/img/buttons/pijltje_wit.png");
+  height: 2rem;
+  width: 3rem;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-left: 2rem;
+}
+
 /*---------------- FOOTER ---------------*/
 
 .footer {
   background-color: var(--groen);
+  color: white;
+  display: grid;
+
+  justify-content: space-around;
+  grid-template-columns: repeat(3, auto) 40rem auto;
+  grid-template-rows: 5rem repeat(4, auto) 2rem;
+  grid-template-areas:
+    "map map map map map"
+    ". . . . ."
+    ". about contact sponsors ."
+    ". social contact sponsors ."
+    ". links links links ."
+    ". . . . .";
+}
+
+.footer__map {
+  grid-area: map;
+}
+
+.footer__about {
+  grid-area: about;
+}
+
+.footer__about h3 {
+  font-size: 4rem;
+  font-weight: var(--extrabold);
+}
+
+.footer__social {
+  grid-area: social;
+}
+
+.footer__contact {
+  grid-area: contact;
+}
+
+.footer__contact h3 {
+  font-size: 2.4rem;
+  font-weight: var(--extrabold);
+}
+
+.footer__sponsors {
+  grid-area: sponsors;
+  display: flex;
+  width: 40rem;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.footer__sponsors img {
+  height: 6.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer__links {
+  grid-area: links;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 5rem;
+}
+
+.footer__links li,
+.footer__links a {
+  color: var(--donkergroen);
+  font-size: 1.5rem;
 }
