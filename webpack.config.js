@@ -1,98 +1,102 @@
-const HtmlWebPackPlugin = require('html-webpack-plugin');
+const HtmlWebPackPlugin = require(`html-webpack-plugin`);
+const MiniCssExtractPlugin = require(`mini-css-extract-plugin`);
 const postcssPresetEnv = require(`postcss-preset-env`);
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const HtmlCriticalWebpackPlugin = require('html-critical-webpack-plugin');
-const path = require('path');
+const OptimizeCSSAssetsPlugin = require(`optimize-css-assets-webpack-plugin`);
+const webpack = require(`webpack`);
 
-const webpack = require('webpack');
+const HtmlCriticalWebpackPlugin = require(`html-critical-webpack-plugin`);
+const path = require(`path`);
 
-module.exports = (env, {mode}) => {
+module.exports = (env, { mode }) => {
   const plugins = [
     new HtmlWebPackPlugin({
-      template: './src/index.html'
+      template: `./src/index.html`,
+      filename: `./index.html`
     }),
     new MiniCssExtractPlugin({
-      filename: 'style.[contenthash].css'
+      filename: `style.[contenthash].css`
     }),
     new OptimizeCSSAssetsPlugin(),
     new webpack.HotModuleReplacementPlugin()
   ];
 
-  if (mode === 'production') {
+  if (mode === `production`) {
     plugins.push(
       new HtmlCriticalWebpackPlugin({
-        base: path.resolve(__dirname, 'dist'),
-        src: 'index.html',
-        dest: 'index.html',
+        base: path.resolve(__dirname, `dist`),
+        src: `index.html`,
+        dest: `index.html`,
         inline: true,
         minify: true,
         extract: true,
-        dimensions: [
-          {
-            width: 1500,
-            height: 700
-          }
-        ],
+        width: 1200,
+        height: 565,
         penthouse: {
           blockJSRequests: false
         }
       })
     );
+    console.log(plugins);
   }
+
+  // TODO: kijk of mode production is
+  // indien ja, new HtmlCritval... in de array plugins steken
 
   return {
     output: {
-      filename: '[name].[hash].js'
+      filename: `[name].[hash].js`
     },
     devServer: {
       overlay: true,
-      hot: true,
-      contentBase: './src'
+      hot: true
     },
     module: {
       rules: [
         {
           test: /\.js$/,
           exclude: /node_modules/,
-          loader: `babel-loader`
+          use: {
+            loader: `babel-loader`
+          }
         },
         {
           test: /\.html$/,
           use: [
             {
-              loader: 'html-srcsets-loader',
+              loader: `html-srcsets-loader`,
               options: {
-                attrs: [':src', ':srcset']
+                attrs: [`:src`, `:srcset`]
               }
             }
           ]
         },
         {
-          test: /\.(jpe?g|svg|png|webp)$/,
-          loader: `url-loader`,
-          options: {
-            limit: 1000,
-            context: './src',
-            name: '[path][name].[hash].[ext]'
+          test: /\.(jpe?g|png|svg|webp|woff|woff2)$/,
+          use: {
+            loader: `url-loader`,
+            options: {
+              limit: 1000,
+              context: `./src`,
+              name: `[path][name].[ext]`
+            }
           }
         },
         {
           test: /\.css$/,
-          loader: [
-            mode === 'production'
+          use: [
+            mode === `production`
               ? MiniCssExtractPlugin.loader
-              : 'style-loader',
-            'css-loader',
-            'resolve-url-loader',
+              : `style-loader`,
+            `css-loader`,
+            `resolve-url-loader`,
             {
-              loader: 'postcss-loader',
+              loader: `postcss-loader`,
               options: {
                 sourceMap: true,
                 plugins: [
-                  require(`postcss-will-change`),
                   require(`postcss-import`),
-                  postcssPresetEnv({stage: 0})
+                  postcssPresetEnv({ stage: 0 }),
+                  require(`postcss-will-change`)
                 ]
               }
             }

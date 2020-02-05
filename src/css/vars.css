@@ -1,10 +1,13 @@
 :root {
   --lila: #8089ce;
   --donkerlila: #4c5384;
-  --groen: #4c9ea1;
+  --groen: #6ec8cd;
   --donkergroen: #3e8f94;
   --donkergrijs: #eee;
   --lichtgrijs: whitesmoke;
+  --semibold: 600;
+  --bold: 700;
+  --extrabold: 800;
 }
 
 @custom-media --xs screen and (min-width: 0);

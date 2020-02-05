@@ -1,4 +1,5 @@
 @import "./css/reset.css";
+@import "./css/vars.css";
 
 html {
   font-size: 62.5%;
@@ -15,8 +16,42 @@ html {
 
 /* stylelint-enable */
 
+@font-face {
+  font-family: Nunito;
+  src: url("./assets/fonts/nunito/nunito-regular.woff2") format("woff2"),
+    url("./assets/fonts/nunito/nunito-regular.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Nunito;
+  src: url("./assets/fonts/nunito/nunito-semibold.woff2") format("woff2"),
+    url("./assets/fonts/nunito/nunito-semibold.woff") format("woff");
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Nunito;
+  src: url("./assets/fonts/nunito/nunito-bold.woff2") format("woff2"),
+    url("./assets/fonts/nunito/nunito-bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Nunito;
+  src: url("./assets/fonts/nunito/nunito-extrabold.woff2") format("woff2"),
+    url("./assets/fonts/nunito/nunito-extrabold.woff") format("woff");
+  font-style: normal;
+  font-weight: 800;
+}
+
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Nunito, Helvetica, Arial, sans-serif;
+  background-color: var(--lichtgrijs);
+  line-height: 1.5;
 }
 
 .hide {
@@ -26,15 +61,52 @@ body {
 .btn__lila {
   background-color: var(--lila);
   color: white;
+  text-decoration: none;
+  font-size: 2.2rem;
+}
+
+.btn__groen {
+  background-color: var(--groen);
+  color: white;
+  text-decoration: none;
+  font-size: 2.2rem;
+}
+
+p {
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+a {
+}
+
+strong {
+  font-weight: var(--bold);
+}
+
+section {
+  padding: 5rem 0;
 }
 
 h1 {
   color: var(--lila);
+  font-size: 7rem;
+  font-weight: var(--extrabold);
+}
+
+h2 {
+  font-size: 3.8rem;
+  font-weight: var(--bold);
+}
+
+.title-highlight {
+  font-weight: var(--extrabold);
 }
 
 /*-------------- HEADER ---------------*/
 
 .header {
+  background-color: var(--donkergrijs);
 }
 
 .header__title {
@@ -42,9 +114,14 @@ h1 {
 
 .header__subtitle {
   color: var(--donkerlila);
+  font-size: 3rem;
+  font-weight: var(--bold);
 }
 
 .header__nav {
+  font-size: 2.4rem;
+  /* width: 56rem; */
+  font-weight: var(--semibold);
 }
 
 .header__navlink {
@@ -56,11 +133,13 @@ h1 {
 /*------------ OVER CONNEXT --------------*/
 
 .overconnext {
+  background-color: var(--lichtgrijs);
 }
 
 /*---------- TRACK & TRACE --------*/
 
 .tracktrace {
+  background-color: var(--lila);
 }
 
 /*---------- EUROMETROPOOL --------*/
@@ -76,4 +155,10 @@ h1 {
 /*------------ OVER NEXT --------------*/
 
 .overnext {
+}
+
+/*---------------- FOOTER ---------------*/
+
+.footer {
+  background-color: var(--groen);
 }
