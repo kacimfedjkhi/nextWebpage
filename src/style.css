@@ -60,8 +60,10 @@ html {
 
 body {
   font-family: Nunito, Helvetica, Arial, sans-serif;
-  background-color: var(--lichtgrijs);
-  line-height: 1.5;
+  /* background-color: var(--lichtgrijs); */
+  line-height: 1.7;
+  color: #101010;
+  background: url("./assets/img/noise.png");
 }
 
 .hide {
@@ -92,7 +94,8 @@ strong {
 }
 
 section {
-  padding: 5rem;
+  padding: 0 5rem;
+  margin: 5rem 0;
 }
 
 h1 {
@@ -113,30 +116,35 @@ h2 {
 /*-------------- HEADER ---------------*/
 
 .header {
-  background-color: var(--donkergrijs);
+  /* background-color: var(--donkergrijs); */
+  background: url("./assets/img/header.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
   display: grid;
   height: 100vh;
-  grid-area: 2rem;
-  grid-template-columns: 55% 55rem auto;
+  grid-template-columns: 55% 55rem;
   grid-template-rows: 5rem repeat(5, auto) 15rem;
   grid-template-areas:
-    "img . ."
-    "img . lang"
-    "img title ."
-    "img subtitle ."
-    "img nav ."
-    "img btn ."
-    "img . .";
+    "img . "
+    "img lang"
+    "img title"
+    "img subtitle"
+    "img nav"
+    "img btn"
+    "img .";
 }
 
 .header__title {
   grid-area: title;
+  background: url("./assets/img/cirkels/headercirkel.png");
+  background-repeat: no-repeat;
 }
 
 .header__lang {
   grid-area: lang;
   font-family: "Aracne Condensed";
   font-size: 2.8rem;
+  justify-self: end;
 }
 
 .lang__nl {
@@ -201,6 +209,7 @@ h2 {
   background-position: center;
   width: 35rem;
   height: 7rem;
+  justify-self: center;
 }
 
 .header__btn span {
@@ -215,14 +224,15 @@ h2 {
 /*------------ OVER CONNEXT --------------*/
 
 .overconnext {
-  background-color: var(--lichtgrijs);
+  /* background-color: var(--lichtgrijs); */
   display: grid;
-  grid-template-columns: 1fr 66rem 66rem 1fr;
+  grid-template-columns: 66rem 66rem;
   grid-template-rows: repeat(3, auto);
   grid-template-areas:
-    ". title fotos ."
-    ". text fotos ."
-    ". btn fotos .";
+    "title fotos"
+    "text fotos"
+    "btn fotos";
+  padding-left: 15rem;
 }
 
 .overconnext strong {
@@ -232,6 +242,11 @@ h2 {
 .overconnext__title {
   grid-area: title;
   color: var(--groen);
+  background: url("./assets/img/cirkels/overconnextcirkel.png");
+  background-repeat: no-repeat;
+  background-size: 40%;
+  padding-top: 2rem;
+  padding-bottom: 1.2rem;
 }
 
 .overconnext .title-highlight {
@@ -240,11 +255,31 @@ h2 {
 
 .overconnext__fotos {
   grid-area: fotos;
+  position: relative;
+}
+
+.overconnext__bg {
+  position: relative;
+  width: 60rem;
+  height: 40rem;
+}
+
+.overconnext__foto {
+  /* background: url("./assets/img/overconnext/groenkaartje.png");
+  background-size: 100%;
+  background-repeat: no-repeat; */
+  transform: rotate(-5deg);
+  width: 60rem;
+  height: 40rem;
+  position: absolute;
+  top: 0rem;
+  left: -3rem;
 }
 
 .overconnext__text {
   grid-area: text;
-  width: 60rem;
+  width: 52rem;
+  margin: 2rem 0;
 }
 
 .overconnext__btn {
@@ -258,6 +293,7 @@ h2 {
   background-position: center;
   width: 46rem;
   height: 7rem;
+  margin-left: -2rem;
 }
 
 .overconnext__btn span {
@@ -272,8 +308,12 @@ h2 {
 /*---------- TRACK & TRACE --------*/
 
 .tracktrace {
+  background: url("./assets/img/tracktrace_banner2.png");
   height: 50rem;
-  background-color: var(--lila);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  /* background-color: var(--lila); */
   color: white;
   display: flex;
   flex-direction: column;
@@ -286,23 +326,39 @@ h2 {
   color: white;
 }
 
+.tracktrace__text {
+  width: 55rem;
+  margin: 2rem 0;
+}
+
 .code-input {
-  width: 20rem;
-  height: 5rem;
-  background-color: rgb(255, 255, 255, 25%);
+  background: url("./assets/img/input.png");
+  background-repeat: no-repeat;
+  width: 32.5rem;
+  height: 7rem;
   border: none;
-  border-bottom: 0.3rem solid white;
   font-size: 2.8rem;
   color: white;
   text-align: center;
+}
+
+.code-input:focus {
+  outline: none;
 }
 
 /*---------- EUROMETROPOOL --------*/
 
 .eurometropool {
   position: relative;
-  height: 55rem;
-  padding-left: 5rem;
+  height: 50rem;
+  padding-left: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.eurometropool strong {
+  color: var(--donkerlila);
 }
 
 .eurometropool__title {
@@ -314,14 +370,15 @@ h2 {
 }
 
 .eurometropool__img {
-  width: 65rem;
+  width: 70rem;
   position: absolute;
-  right: 15rem;
-  bottom: 10rem;
+  right: 10rem;
+  bottom: 3rem;
 }
 
 .eurometropool__text {
-  width: 60rem;
+  width: 52rem;
+  margin: 3rem 0;
 }
 
 .eurometropool__btn {
@@ -334,6 +391,7 @@ h2 {
   background-position: center;
   width: 52rem;
   height: 7rem;
+  margin-left: -2rem;
 }
 
 .eurometropool__btn span {
@@ -355,36 +413,133 @@ h2 {
 }
 
 .weetjes__envelop {
-  background: url("./assets/img/weetjes/envelop.png");
+  background: url("./assets/img/weetjes/envelop2.png");
   width: 70rem;
-  height: 70rem;
-  background-size: 90%;
+  height: 69rem;
+  background-size: 100%;
   background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
 }
 
 .envelop__title {
   color: white;
+  font-size: 3rem;
+  width: 33rem;
+  text-align: center;
+  margin-top: 10rem;
+}
+
+.envelop__text {
+  width: 38rem;
+  text-align: center;
+  margin: 2rem 0 13rem;
+}
+
+.envelop__btns {
+  display: flex;
+}
+
+.envelop__btn {
+  border: none;
+  background-color: unset;
+  color: var(--donkergroen);
+  font-family: Nunito;
+}
+
+.envelop__btn:focus {
+  outline: none;
+}
+
+.envelop__btn:hover {
+  cursor: pointer;
+}
+
+.envelop__btn img {
+  width: 7rem;
+  height: 7rem;
 }
 
 .weetjes__kaartje {
-  background: url("./assets/img/weetjes/kaartje.png");
+  background: url("./assets/img/weetjes/kaartje2.png");
   background-repeat: no-repeat;
   background-size: 100%;
   width: 70rem;
-  height: 46rem;
+  height: 47rem;
+  margin-left: -15rem;
+  position: relative;
+}
+
+.kaartje__answers {
+  font-family: "Aracne Condensed";
+  color: var(--donkergroen);
+  position: absolute;
+  top: 10rem;
+  left: 12rem;
+}
+
+.answer {
+  font-size: 2.6rem;
+  width: 20rem;
+  text-align: center;
+  line-height: 1.3;
+  margin-bottom: 3rem;
+}
+
+.answer1 {
+  color: var(--groen);
+  transform: rotate(-5deg);
+}
+
+.answer2 {
+  color: var(--donkergroen);
+  transform: rotate(5deg);
+}
+
+.answer3 {
+  color: var(--groen);
+  transform: rotate(-5deg);
+}
+
+.kaartje__text {
+  color: var(--lila);
+  text-align: right;
+  width: 38rem;
+  position: absolute;
+  right: 2rem;
+  bottom: -10rem;
+}
+
+.kaartje__text strong {
+  color: var(--donkerlila);
 }
 
 /*------------ OVER NEXT --------------*/
 
 .overnext {
+  /* width: 90rem; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 15rem;
+  padding-right: 15rem;
 }
 
 .overnext__title {
   color: var(--lila);
+  align-self: start;
 }
 
 .overnext__title .title-highlight {
   color: var(--donkerlila);
+}
+
+.overnext__text {
+  margin: 3rem 0;
+  display: flex;
 }
 
 .overnext__btn {
@@ -397,6 +552,8 @@ h2 {
   background-position: center;
   width: 42rem;
   height: 7rem;
+  margin-left: -2rem;
+  justify-self: center;
 }
 
 .overnext__btn span {
