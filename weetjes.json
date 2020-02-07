@@ -1,0 +1,22 @@
+{
+  "Culinair": {
+    "answer1": "In België heeft men de beste frieten",
+    "answer2": "Stamppot is een typisch streekgerecht uit Kortrijk",
+    "answer3": "Rouge Barre in Lille is top"
+  },
+  "Actualiteit": {
+    "answer1": "In Doornik kijkt men uit naar Kunst in de Stad",
+    "answer2": "Elke maand is er een biologische markt in Valenciennes",
+    "answer3": "In Ieper herdenkt met binnenkort de oorlog"
+  },
+  "Kunst": {
+    "answer1": "Watteau was een bekende schilder uit Valenciennes",
+    "answer2": "In Roeselare kan je mooie street art vinden",
+    "answer3": "In Doornik vind je veel historische architectuur"
+  },
+  "Toerisme": {
+    "answer1": "De Budascoop in Kortrijk is een verborgen juweeltje",
+    "answer2": "Het Lille Comics Festival is zeer populair",
+    "answer3": "De sfeer in Doornik is heel gezellig"
+  }
+}

@@ -40,7 +40,8 @@
     <main>
       <section class="overconnext">
         <h2 class="overconnext__title">
-          Over <span class="title-highlight">CONNEXT</span>
+          Over <span class="title-highlight">CONNEXT</span
+          ><span class="overconnext__cirkel"></span>
         </h2>
         <div class="overconnext__fotos">
           <img
@@ -77,6 +78,7 @@
 
       <section class="tracktrace">
         <h2 class="tracktrace__title">
+          <span class="tracktrace__cirkel"></span>
           <span class="title-highlight">Waar</span> is mijn verzonden kaartje?
         </h2>
         <p class="tracktrace__text">
@@ -87,9 +89,9 @@
           versturen van je kaartje en ontdek het traject van uw kaartje via de
           <strong>track and trace</strong>.
         </p>
-        <form action="">
-          <input class="code-input" type="text" />
-          <input type="submit" value="Kaartje zoeken" />
+        <form class="tracktrace__form" action="">
+          <input class="form__input" type="text" />
+          <input class="form__submit" type="submit" value="Kaartje zoeken" />
         </form>
       </section>
 
@@ -128,7 +130,7 @@
             <strong>Ontdek en leer!</strong>
           </p>
           <div class="envelop__btns">
-            <button class="envelop__btn">
+            <button class="envelop__btn envelop__btn-active">
               <img
                 src="./assets/img/buttons/weetjes_selected.png"
                 alt="Culinair"
@@ -160,13 +162,9 @@
         </div>
         <div class="weetjes__kaartje">
           <div class="kaartje__answers">
-            <p class="answer answer1">In België heeft men de beste frieten</p>
-            <p class="answer answer2">
-              Stamppot is een typisch streekgerecht uit Kortrijk
-            </p>
-            <p class="answer answer3">
-              Au Vieux Saint Martin in Brussel is top
-            </p>
+            <p class="answer answer1"></p>
+            <p class="answer answer2"></p>
+            <p class="answer answer3"></p>
           </div>
           <p class="kaartje__text">
             <strong> Wil je ook iets vertellen?</strong>
@@ -207,8 +205,16 @@
       </section>
     </main>
 
+    <div class="map">
+      <iframe
+        class="mymap"
+        src="https://www.google.com/maps/d/embed?mid=1vwQbRu6QbKIGKYqkukI-gia_qqujpcZe"
+        width="640"
+        height="480"
+      ></iframe>
+    </div>
+
     <footer class="footer">
-      <div class="footer__map"></div>
       <div class="footer__about">
         <h3>CONNEXT</h3>
         <p>
@@ -217,11 +223,15 @@
         </p>
       </div>
       <div class="footer__social">
-        <a href="">Facebook</a>
-        <a href="">Instagram</a>
+        <a href="https://www.facebook.com/Festival.NEXT/"
+          ><img src="./assets/img/footer/fb.png" alt="Facebook logo"
+        /></a>
+        <a href="#"
+          ><img src="./assets/img/footer/insta.png" alt="Instagram logo"
+        /></a>
       </div>
       <div class="footer__contact">
-        <h3>Contact</h3>
+        <h3>Contact<span></span></h3>
         <p>
           <strong
             >Kapucijnenstraat 10<br />
@@ -250,11 +260,17 @@
         </li>
       </ul>
       <ul class="footer__links">
-        <li><a href="#">Disclaimer</a></li>
-        <li><a href="#">Privacyverklaring</a></li>
-        <li><a href="#">Cookie policy</a></li>
-        <li>Bachelorproef - © 2020</li>
+        <li class="link-shrink"><a href="#">Disclaimer</a></li>
+        <li class="link-shrink"><a href="#">Privacyverklaring</a></li>
+        <li class="link-shrink"><a href="#">Cookie policy</a></li>
+        <li class="link-grow">Bachelorproef - © 2020</li>
       </ul>
     </footer>
+    <!-- <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+      type="text/javascript"
+    ></script> -->
   </body>
 </html>

@@ -233,6 +233,7 @@ h2 {
     "text fotos"
     "btn fotos";
   padding-left: 15rem;
+  justify-content: center;
 }
 
 .overconnext strong {
@@ -242,15 +243,26 @@ h2 {
 .overconnext__title {
   grid-area: title;
   color: var(--groen);
-  background: url("./assets/img/cirkels/overconnextcirkel.png");
-  background-repeat: no-repeat;
-  background-size: 40%;
+
   padding-top: 2rem;
   padding-bottom: 1.2rem;
+  position: relative;
 }
 
-.overconnext .title-highlight {
-  color: var(--donkergroen);
+.overconnext__title .title-highlight {
+  color: var(--mediumgroen);
+}
+
+.overconnext__cirkel {
+  background: url("./assets/img/cirkels/overconnextcirkel.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  width: 25rem;
+  height: 8rem;
+  top: 1rem;
+  left: 5rem;
+  z-index: -1;
 }
 
 .overconnext__fotos {
@@ -272,7 +284,6 @@ h2 {
   width: 60rem;
   height: 40rem;
   position: absolute;
-  top: 0rem;
   left: -3rem;
 }
 
@@ -308,7 +319,7 @@ h2 {
 /*---------- TRACK & TRACE --------*/
 
 .tracktrace {
-  background: url("./assets/img/tracktrace_banner2.png");
+  background: url("./assets/img/tracktrace_banner.png");
   height: 50rem;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -317,13 +328,29 @@ h2 {
   color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   text-align: center;
+  padding-left: 30rem;
 }
 
 .tracktrace__title {
   color: white;
+  position: relative;
+}
+
+.tracktrace__cirkel {
+  background: url("./assets/img/cirkels/tracktracecirkel.png");
+  background-repeat: no-repeat;
+  background-size: 80%;
+  height: 10rem;
+  width: 20rem;
+  position: absolute;
+  top: -1rem;
+  left: -3.5rem;
+}
+
+.tracktrace__form {
 }
 
 .tracktrace__text {
@@ -331,7 +358,7 @@ h2 {
   margin: 2rem 0;
 }
 
-.code-input {
+.form__input {
   background: url("./assets/img/input.png");
   background-repeat: no-repeat;
   width: 32.5rem;
@@ -342,8 +369,28 @@ h2 {
   text-align: center;
 }
 
-.code-input:focus {
+.form__input:focus {
   outline: none;
+}
+
+.form__submit {
+  border: none;
+  color: var(--lila);
+  font-size: 1.8rem;
+  height: 6rem;
+  width: 20rem;
+  background: url(assets/img/buttons/tracktracebutton.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-left: 2rem;
+}
+
+.form__submit:focus {
+  outline: none;
+}
+
+.form__submit:hover {
+  cursor: pointer;
 }
 
 /*---------- EUROMETROPOOL --------*/
@@ -431,6 +478,7 @@ h2 {
   width: 33rem;
   text-align: center;
   margin-top: 10rem;
+  line-height: 1.5;
 }
 
 .envelop__text {
@@ -487,6 +535,7 @@ h2 {
   text-align: center;
   line-height: 1.3;
   margin-bottom: 3rem;
+  transition: all 1s ease-in-out 0s;
 }
 
 .answer1 {
@@ -495,12 +544,12 @@ h2 {
 }
 
 .answer2 {
-  color: var(--donkergroen);
+  color: var(--mediumgroen);
   transform: rotate(5deg);
 }
 
 .answer3 {
-  color: var(--groen);
+  color: var(--donkergroen);
   transform: rotate(-5deg);
 }
 
@@ -542,6 +591,10 @@ h2 {
   display: flex;
 }
 
+.overnext__text p {
+  padding-right: 5rem;
+}
+
 .overnext__btn {
   display: flex;
   justify-content: center;
@@ -568,24 +621,27 @@ h2 {
 /*---------------- FOOTER ---------------*/
 
 .footer {
-  background-color: var(--groen);
+  /* background-color: var(--groen); */
+  background: url("./assets/img/footer/footer.png");
+  padding-top: 8rem;
   color: white;
   display: grid;
-
-  justify-content: space-around;
-  grid-template-columns: repeat(3, auto) 40rem auto;
-  grid-template-rows: 5rem repeat(4, auto) 2rem;
+  grid-gap: 3rem;
+  justify-content: center;
+  grid-template-columns: repeat(2, auto) 40rem;
+  grid-template-rows: repeat(3, auto);
   grid-template-areas:
-    "map map map map map"
-    ". . . . ."
-    ". about contact sponsors ."
-    ". social contact sponsors ."
-    ". links links links ."
-    ". . . . .";
+    "about contact sponsors"
+    "social contact sponsors"
+    "links links links";
 }
 
-.footer__map {
+.map {
   grid-area: map;
+}
+
+.mymap {
+  width: 100%;
 }
 
 .footer__about {
@@ -601,13 +657,32 @@ h2 {
   grid-area: social;
 }
 
+.footer__social a {
+  margin-right: 2rem;
+}
+
 .footer__contact {
   grid-area: contact;
+  margin: 0 5rem;
 }
 
 .footer__contact h3 {
   font-size: 2.4rem;
   font-weight: var(--extrabold);
+  padding-bottom: 1.3rem;
+  padding-top: 1.5rem;
+  position: relative;
+}
+
+.footer__contact span {
+  background: url("./assets/img/cirkels/contactcirkel.png");
+  background-repeat: no-repeat;
+  background-size: 95%;
+  width: 15rem;
+  height: 8rem;
+  position: absolute;
+  top: -0.4rem;
+  left: -2.5rem;
 }
 
 .footer__sponsors {
@@ -628,11 +703,19 @@ h2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 5rem;
 }
 
 .footer__links li,
 .footer__links a {
   color: var(--donkergroen);
   font-size: 1.5rem;
+}
+
+.link-shrink {
+  flex-grow: 1;
+}
+
+.link-grow {
+  flex-grow: 5;
+  text-align: right;
 }
