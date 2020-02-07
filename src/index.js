@@ -54,6 +54,22 @@ import "./style.css";
     }
   };
 
+  const handleHoverOverBtn = e => {
+    const $hoveredBtn = e.currentTarget;
+    $hoveredBtn.querySelector(
+      `img`
+    ).src = `./assets/img/buttons/weetjes_selected.png`;
+  };
+
+  const handleHoverOutBtn = e => {
+    const $hoveredBtn = e.currentTarget;
+    if (!$hoveredBtn.classList.contains(`envelop__btn-active`)) {
+      $hoveredBtn.querySelector(
+        `img`
+      ).src = `./assets/img/buttons/weetjes_unselected.png`;
+    }
+  };
+
   const rotatePhotos = () => {
     const $photoImg = document.querySelector(`.overconnext__foto`);
     const imgSrc = $photoImg.src;
@@ -65,6 +81,8 @@ import "./style.css";
     const $btns = document.querySelectorAll(`.envelop__btn`);
     $btns.forEach($btn => {
       $btn.addEventListener(`click`, handleClickBtn);
+      $btn.addEventListener(`mouseover`, handleHoverOverBtn);
+      $btn.addEventListener(`mouseout`, handleHoverOutBtn);
     });
     // fetch weetjes
     fetch(`./weetjes.json`)
