@@ -1,8 +1,12 @@
 import "./style.css";
 
 {
+  const $foto1 = document.querySelector(`.foto1`);
+  const $foto2 = document.querySelector(`.foto2`);
+  const $foto3 = document.querySelector(`.foto3`);
   let currentTheme = `Culinair`;
   let weetjesData;
+  let photoCounter = 0;
 
   const showAnswers = data => {
     if (currentTheme === `Culinair`) {
@@ -26,7 +30,6 @@ import "./style.css";
 
   const changeTheme = newTheme => {
     currentTheme = newTheme;
-    console.log(currentTheme);
     showAnswers(weetjesData);
   };
 
@@ -71,13 +74,32 @@ import "./style.css";
   };
 
   const rotatePhotos = () => {
-    const $photoImg = document.querySelector(`.overconnext__foto`);
-    const imgSrc = $photoImg.src;
-    console.log(imgSrc);
+    if (photoCounter === 0) {
+      $foto2.style.opacity = `0`;
+      $foto3.style.opacity = `0`;
+      photoCounter += 1;
+    } else if (photoCounter === 1) {
+      $foto1.style.opacity = `1`;
+      $foto2.style.opacity = `0`;
+      $foto3.style.opacity = `0`;
+      photoCounter += 1;
+    } else if (photoCounter === 2) {
+      $foto1.style.opacity = `0`;
+      $foto2.style.opacity = `1`;
+      $foto3.style.opacity = `0`;
+      photoCounter += 1;
+    } else if (photoCounter === 3) {
+      $foto1.style.opacity = `0`;
+      $foto2.style.opacity = `0`;
+      $foto3.style.opacity = `1`;
+      photoCounter = 1;
+    }
   };
 
   const init = () => {
-    rotatePhotos();
+    setInterval(() => {
+      rotatePhotos();
+    }, 3000);
     const $btns = document.querySelectorAll(`.envelop__btn`);
     $btns.forEach($btn => {
       $btn.addEventListener(`click`, handleClickBtn);
@@ -88,7 +110,6 @@ import "./style.css";
     fetch(`./weetjes.json`)
       .then(r => r.json())
       .then(data => {
-        console.log(data);
         showAnswers(data);
         weetjesData = data;
       });
