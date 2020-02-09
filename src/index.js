@@ -57,6 +57,24 @@ import "./style.css";
     }
   };
 
+  const handleClickLink = e => {
+    e.preventDefault();
+    const $clickedLink = e.currentTarget;
+    if ($clickedLink.classList.contains(`scroll_eurometropool`)) {
+      document.querySelector(`.eurometropool`).scrollIntoView({
+        behavior: `smooth`
+      });
+    } else if ($clickedLink.classList.contains(`scroll_connext`)) {
+      document.querySelector(`.overconnext`).scrollIntoView({
+        behavior: `smooth`
+      });
+    } else if ($clickedLink.classList.contains(`scroll_tracktrace`)) {
+      document.querySelector(`.tracktrace`).scrollIntoView({
+        behavior: `smooth`
+      });
+    }
+  };
+
   const handleHoverOverBtn = e => {
     const $hoveredBtn = e.currentTarget;
     $hoveredBtn.querySelector(
@@ -101,13 +119,20 @@ import "./style.css";
     setInterval(() => {
       rotatePhotos();
     }, 3000);
+
+    //eventlisteners
     const $btns = document.querySelectorAll(`.envelop__btn`);
     $btns.forEach($btn => {
       $btn.addEventListener(`click`, handleClickBtn);
       $btn.addEventListener(`mouseover`, handleHoverOverBtn);
       $btn.addEventListener(`mouseout`, handleHoverOutBtn);
     });
-    // fetch weetjes
+    const $links = document.querySelectorAll(`a`);
+    $links.forEach($link => {
+      $link.addEventListener(`click`, handleClickLink);
+    });
+
+    //fetch weetjes data
     fetch(`./weetjes.json`)
       .then(r => r.json())
       .then(data => {
