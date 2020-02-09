@@ -72,6 +72,10 @@ import "./style.css";
       document.querySelector(`.tracktrace`).scrollIntoView({
         behavior: `smooth`
       });
+    } else if ($clickedLink.classList.contains(`scroll_map`)) {
+      document.querySelector(`.map`).scrollIntoView({
+        behavior: `smooth`
+      });
     }
   };
 
@@ -115,6 +119,12 @@ import "./style.css";
     }
   };
 
+  // const initMap = () => {
+  //   // locations
+  //   // map zelf
+  //   // locations markers
+  // };
+
   const init = () => {
     setInterval(() => {
       rotatePhotos();
@@ -131,6 +141,9 @@ import "./style.css";
     $links.forEach($link => {
       $link.addEventListener(`click`, handleClickLink);
     });
+
+    // map initialiseren
+    //initMap();
 
     //fetch weetjes data
     fetch(`./weetjes.json`)

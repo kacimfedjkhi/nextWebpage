@@ -163,7 +163,6 @@ h2 {
   }
 
   @media (--lg) {
-    /* height: 100vh; */
     background: url("./assets/img/headerbg/header_1440.png");
     grid-template-columns: 55% 45%;
     grid-template-rows: 5rem auto auto 25rem auto;
@@ -177,7 +176,6 @@ h2 {
 
   @media (--xl) {
     padding-top: 5rem;
-    /* height: 100vh; */
     background: url("./assets/img/headerbg/header_1440.png");
     grid-template-rows: 5rem repeat(4, auto);
     padding-bottom: 5rem;
@@ -247,6 +245,7 @@ h2 {
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
+  margin-left: -1rem;
 }
 
 .header__img {
@@ -1217,9 +1216,16 @@ h2 {
   }
 }
 
+/* .map {
+  width: 100%;
+  height: 40rem;
+
+} */
+
 .mymap {
   width: 100%;
-  max-height: 40rem;
+  height: 40rem;
+  position: static;
 }
 
 .footer__about {
