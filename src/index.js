@@ -75,8 +75,9 @@ import "./style.css";
 
   const rotatePhotos = () => {
     if (photoCounter === 0) {
+      $foto1.style.opacity = `0`;
       $foto2.style.opacity = `0`;
-      $foto3.style.opacity = `0`;
+      $foto3.style.opacity = `1`;
       photoCounter += 1;
     } else if (photoCounter === 1) {
       $foto1.style.opacity = `1`;
