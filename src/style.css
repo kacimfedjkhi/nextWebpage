@@ -141,10 +141,24 @@ h2 {
   font-weight: var(--extrabold);
 }
 
+.header-randje {
+  background: url("./assets/img/headerbg/header_randje.png");
+  background-size: 100%;
+  height: 0.8rem;
+  opacity: 0.8;
+  background-repeat: repeat-x;
+
+  @media (--md) {
+    background: url("./assets/img/headerbg/header_randje_large.png");
+    background-size: 100%;
+    background-repeat: repeat-x;
+  }
+}
+
 /*-------------- HEADER ---------------*/
 
 .header {
-  background: url("./assets/img/headerbg/header_xs.png");
+  background: url("./assets/img/headerbg/header_320.png");
   background-size: 100%;
   background-repeat: no-repeat;
   display: grid;
@@ -158,12 +172,29 @@ h2 {
     "btn";
   padding: 1.5rem;
 
+  @media (min-width: 400px) {
+    background: url("./assets/img/headerbg/header_400.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
   @media (--sm) {
     justify-content: center;
+    background: url("./assets/img/headerbg/header_576.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: 700px) {
+    background: url("./assets/img/headerbg/header_700.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
   }
 
   @media (--lg) {
-    background: url("./assets/img/headerbg/header_1440.png");
+    background: url("./assets/img/headerbg/header_960.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
     grid-template-columns: 55% 45%;
     grid-template-rows: 5rem auto auto 25rem auto;
     grid-template-areas:
@@ -174,11 +205,27 @@ h2 {
       "img btn";
   }
 
+  @media (min-width: 1140px) {
+    background: url("./assets/img/headerbg/header_1140.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
   @media (--xl) {
     padding-top: 5rem;
-    background: url("./assets/img/headerbg/header_1440.png");
+    background: url("./assets/img/headerbg/header_1260.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
     grid-template-rows: 5rem repeat(4, auto);
     padding-bottom: 5rem;
+    height: 80rem;
+  }
+
+  @media (--xxl) {
+    background: url("./assets/img/headerbg/header_1440.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    /* height: 100rem; */
   }
 }
 
@@ -373,6 +420,10 @@ h2 {
     width: unset;
     justify-content: space-around;
   }
+
+  @media (--xxl) {
+    margin: 10rem 0;
+  }
 }
 
 .overconnext strong {
@@ -420,6 +471,10 @@ h2 {
   position: relative;
   width: 25rem;
 
+  @media (min-width: 460px) {
+    width: 40rem;
+  }
+
   @media (--sm) {
     width: 50rem;
   }
@@ -448,6 +503,10 @@ h2 {
   opacity: 1;
   transition: opacity 0.5s ease-in-out 0s;
   width: 25rem;
+
+  @media (min-width: 460px) {
+    width: 40rem;
+  }
 
   @media (--sm) {
     width: 50rem;
@@ -552,7 +611,7 @@ h2 {
 /*---------- TRACK & TRACE --------*/
 
 .tracktrace {
-  background: url("./assets/img/tracktracebg/tracktrace_xs.png");
+  background: url("./assets/img/tracktracebg/tracktrace_400_2.png");
 
   background-repeat: no-repeat;
   background-size: 100%;
@@ -564,16 +623,63 @@ h2 {
   justify-content: center;
   text-align: center;
   margin: 4rem 0;
-  height: 55.5rem;
+  height: 55rem;
+
+  @media (min-width: 430px) {
+    background: url("./assets/img/tracktracebg/tracktrace_430.png");
+
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  @media (--sm) {
+    background: url("./assets/img/tracktracebg/tracktrace_567.png");
+
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 45rem;
+    align-items: center;
+  }
 
   @media (--lg) {
-    background: url("./assets/img/tracktrace_banner2.png");
+    background: url("./assets/img/tracktracebg/tracktrace_960.png");
     height: 50rem;
-    padding-left: 30rem;
+    padding-left: 25rem;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    align-items: flex-start;
+  }
+
+  @media (min-width: 1180px) {
+    background: url("./assets/img/tracktracebg/tracktrace_1180.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    justify-content: flex-start;
+    padding-top: 7rem;
+    height: 40rem;
+  }
+
+  @media (--xl) {
+    padding-left: 35rem;
+    height: 50rem;
   }
 
   @media (min-width: 1330px) {
     padding-left: 40rem;
+  }
+
+  @media (--xxl) {
+    background: url("./assets/img/tracktracebg/tracktrace_1440.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-top: 12rem;
+  }
+
+  @media (min-width: 1630px) {
+    background: url("./assets/img/tracktracebg/tracktrace_1440_2.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-top: 10rem;
   }
 }
 
@@ -665,16 +771,20 @@ h2 {
   justify-content: center;
 
   @media (--sm) {
-    height: 50rem;
     align-items: center;
   }
 
   @media (--lg) {
-    height: 50rem;
+    height: 45rem;
     align-items: unset;
   }
 
   @media (--xl) {
+    /* padding-left: 15rem; */
+    justify-content: flex-start;
+  }
+
+  @media (--xxl) {
     padding-left: 15rem;
   }
 }
@@ -725,7 +835,7 @@ h2 {
 
   @media (min-width: 1600px) {
     width: 75rem;
-    bottom: 0rem;
+    bottom: 4rem;
   }
 }
 
@@ -750,8 +860,13 @@ h2 {
   width: 31rem;
   transition: all 0.1s ease-in-out 0s;
 
+  @media (min-width: 400px) {
+    width: 40rem;
+    align-self: center;
+  }
+
   @media (--sm) {
-    /* align-self: unset; */
+    align-self: unset;
     width: 52rem;
     margin-left: -2rem;
   }
@@ -1171,6 +1286,12 @@ h2 {
 
 /*---------------- FOOTER ---------------*/
 
+.mymap {
+  width: 100%;
+  height: 40rem;
+  position: static;
+}
+
 .footer {
   /* background-color: var(--groen); */
   background: url("./assets/img/footer/footer.png");
@@ -1214,18 +1335,6 @@ h2 {
   @media (--xl) {
     grid-gap: 3rem;
   }
-}
-
-/* .map {
-  width: 100%;
-  height: 40rem;
-
-} */
-
-.mymap {
-  width: 100%;
-  height: 40rem;
-  position: static;
 }
 
 .footer__about {
