@@ -37,32 +37,33 @@
       />
       <h1 class="header__title">CONNEXT</h1>
       <p class="header__subtitle">
-        Dé brievenbus die een antwoord geeft op al jouw vragen!
+        De brievenbus vol slimme postkaartjes die een antwoord geeft op al jouw
+        vragen!
       </p>
       <p class="header__nav">
         Binnen de
-        <a class="header__navlink scroll_eurometropool" href=""
+        <a class="header__navlink scroll_eurometropool" href="#eurometropool"
           >Eurometropool</a
         >
         barst het van mensen die iets te vertellen hebben! Ben je benieuwd wat?
         Kom het te weten via tal van
-        <a class="header__navlink scroll_connext" href=""
+        <a class="header__navlink scroll_connext" href="#overconnext"
           >interactieve installaties</a
         >
         in uw buurt, leer je medeburgers van net over de grens kennen, stuur hen
         een kaartje en
-        <a class="header__navlink scroll_tracktrace" href=""
+        <a class="header__navlink scroll_tracktrace" href="#trackandtrace"
           >blijf dit kaartje op de voet volgen!</a
         >
       </p>
-      <a class="header__btn btn__lila scroll_tracktrace" href=""
+      <a class="header__btn btn__lila scroll_tracktrace" href="#trackandtrace"
         >Waar is mijn kaartje?<span></span
       ></a>
     </header>
 
     <main>
       <div class="header-randje"></div>
-      <section class="overconnext">
+      <section class="overconnext" id="over">
         <h2 class="overconnext__title">
           Over <span class="title-highlight">CONNEXT</span
           ><span class="overconnext__cirkel"></span>
@@ -110,14 +111,14 @@
         ></a>
       </section>
 
-      <section class="tracktrace">
+      <section class="tracktrace" id="trackandtrace">
         <h2 class="tracktrace__title">
           <span class="tracktrace__cirkel"></span>
           <span class="title-highlight">Waar</span> is mijn verzonden kaartje?
         </h2>
         <p class="tracktrace__text">
           Jouw kaartje bevindt zich momenteel binnen de
-          <strong>Eurometropool</strong>.
+          <strong class="down">Eurometropool</strong>.
           <br />
           Voer hier de <strong>unieke code</strong> in die je ontving bij het
           versturen van je kaartje en ontdek het traject van uw kaartje via de
@@ -129,13 +130,13 @@
         </form>
       </section>
 
-      <section class="eurometropool">
+      <section class="eurometropool" id="eurometropool">
         <h2 class="eurometropool__title">
-          Wat is de <span class="title-highlight">Eurometropool?</span>
+          Wat is de <span class="title-highlight">Eurometropool</span>?
         </h2>
         <img
           class="eurometropool__img"
-          src="./assets/img/Illustratie.png"
+          src="./assets/img/kaart.gif"
           alt="Kaartje Eurometropool"
         />
         <p class="eurometropool__text">
@@ -156,13 +157,13 @@
       <section class="weetjes">
         <div class="weetjes__envelop">
           <h2 class="envelop__title">
-            Wat hebben de burgers van de Eurometropool te vertellen?<span
-            ></span>
+            Wat hebben de burgers van de Eurometropool allemaal te
+            <span>vertellen</span>?<span class="cirkel"></span>
           </h2>
           <p class="envelop__text">
             De belangrijkste <strong>conclusies</strong> uit de postkaartjes
             voor jou opgesomd per thema.<br />
-            <strong>Ontdek en leer!</strong>
+            <strong class="ontdekenleer">Ontdek en leer!</strong>
           </p>
           <div class="envelop__btns">
             <button class="envelop__btn envelop__btn-active">
@@ -201,18 +202,19 @@
             <p class="answer answer2"></p>
             <p class="answer answer3"></p>
           </div>
-          <p class="kaartje__text">
-            <strong> Wil je ook iets vertellen?</strong>
-            <br />
-            Vind een installatie in de buurt en schrijf ook jouw kennis op een
-            postkaartje!
-          </p>
         </div>
+        <p class="kaartje__text">
+          <strong> Wil je ook iets vertellen?</strong>
+          <br />
+          Vind een installatie in de buurt en schrijf ook jouw kennis op een
+          postkaartje!
+        </p>
       </section>
 
-      <section class="overnext">
+      <section class="overnext" id="next">
         <h2 class="overnext__title">
-          Over <span class="title-highlight">NEXT Festival</span>
+          Over <span class="title-highlight">NEXT Festival</span
+          ><span class="overnextcirkel"></span>
         </h2>
         <div class="overnext__text">
           <p>
@@ -241,6 +243,11 @@
     </main>
 
     <div class="map">
+      <div class="overlay-map"></div>
+      <div class="tekstballon">
+        <p>Er zijn momenteel <br /><span>4 installaties</span> geplaatst!</p>
+        <p class="tekstballon-vraag">Vind je ze terug?</p>
+      </div>
       <iframe
         class="mymap"
         src="https://www.google.com/maps/d/embed?mid=1vwQbRu6QbKIGKYqkukI-gia_qqujpcZe"
@@ -251,16 +258,17 @@
       <div class="footer__about">
         <h3>CONNEXT</h3>
         <p>
-          is een initiatief van vzw NEXT Kortrijk<br />
-          in samenwerking met Devine KASK
+          is een initiatief van
+          <a href="https://www.nextfestival.eu/">vzw NEXT Kortrijk</a><br />
+          in samenwerking met <a href="https://devine.be/">Devine KASK</a>
         </p>
       </div>
       <div class="footer__social">
         <a href="https://www.facebook.com/Festival.NEXT/"
-          ><img src="./assets/img/footer/fb.png" alt="Facebook logo"
+          ><img src="./assets/img/footer/fb.png" alt="facebook logo"
         /></a>
-        <a href=""
-          ><img src="./assets/img/footer/insta.png" alt="Instagram logo"
+        <a href="https://www.instagram.com/nextfestival_eu/"
+          ><img src="./assets/img/footer/insta.png" alt="instagram logo"
         /></a>
       </div>
       <div class="footer__contact">
@@ -276,20 +284,49 @@
       </div>
       <ul class="footer__sponsors">
         <li>
-          <img src="./assets/img/sponsors/nextfestival.png" alt="sponsor" />
+          <a href="https://nextfestival.eu/">
+            <img src="./assets/img/sponsors/nextfestival.png" alt="sponsor" />
+          </a>
         </li>
         <li>
-          <img src="./assets/img/sponsors/eurometropool.png" alt="sponsor" />
-        </li>
-        <li><img src="./assets/img/sponsors/fwb.png" alt="sponsor" /></li>
-        <li><img src="./assets/img/sponsors/mel.png" alt="sponsor" /></li>
-        <li><img src="./assets/img/sponsors/hauts.png" alt="sponsor" /></li>
-        <li><img src="./assets/img/sponsors/devine.png" alt="sponsor" /></li>
-        <li>
-          <img src="./assets/img/sponsors/vlaanderen.png" alt="sponsor" />
+          <a href="http://eurometropolis.eu/nl/">
+            <img src="./assets/img/sponsors/eurometropool.png" alt="sponsor" />
+          </a>
         </li>
         <li>
-          <img src="./assets/img/sponsors/valenciennes.png" alt="sponsor" />
+          <a href="http://www.federation-wallonie-bruxelles.be/"
+            ><img src="./assets/img/sponsors/fwb.png" alt="sponsor" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.lillemetropole.fr/"
+            ><img src="./assets/img/sponsors/mel.png" alt="sponsor" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.hautsdefrance.fr/"
+            ><img src="./assets/img/sponsors/hauts.png" alt="sponsor" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.devine.be/"
+            ><img src="./assets/img/sponsors/devine.png" alt="sponsor" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.vlaanderen.be/">
+            <img src="./assets/img/sponsors/vlaanderen.png" alt="sponsor" />
+          </a>
+        </li>
+        <li>
+          <a href="http://www.valenciennes-metropole.fr/">
+            <img
+              src="./assets/img/sponsors/valenciennes.png"
+              alt="sponsor"
+              width="180"
+              height="20"
+            />
+          </a>
         </li>
       </ul>
       <ul class="footer__links">
@@ -304,7 +341,9 @@
             >Cookie policy</a
           >
         </li>
-        <li class="link-grow">Bachelorproef - © 2020</li>
+        <li class="link-grow copyright">
+          Bachelorproef Jarno, Kacim, Sofie - © 2020
+        </li>
       </ul>
     </footer>
   </body>

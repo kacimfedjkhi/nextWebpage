@@ -71,7 +71,7 @@ module.exports = (env, { mode }) => {
           ]
         },
         {
-          test: /\.(jpe?g|png|svg|webp|woff|woff2)$/,
+          test: /\.(jpe?g|png|svg|webp|woff|woff2|gif)$/,
           use: {
             loader: `url-loader`,
             options: {

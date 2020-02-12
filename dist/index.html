@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <title>CONNEXT</title>
+  <style>
+    a,body,div,h1,header,html,img,p{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}header{display:block}body{line-height:1}:root{--lila:#8089ce;--donkerlila:#4c5384;--groen:#6ec8cd;--mediumgroen:#4da0a4;--donkergroen:#3e8f94;--donkergrijs:#eee;--lichtgrijs:#f5f5f5;--semibold:600;--bold:700;--extrabold:800}html{font-size:62.5%;box-sizing:border-box}*,:after,:before{box-sizing:inherit}@font-face{font-family:Aracne Condensed;src:url(assets/fonts/aracne-condensed/aracne-condensed-regular.woff2) format("woff2"),url(assets/fonts/aracne-condensed/aracne-condensed-regular.woff) format("woff");font-style:normal;font-weight:400}@font-face{font-family:Nunito;src:url(assets/fonts/nunito/nunito-regular.woff2) format("woff2"),url(assets/fonts/nunito/nunito-regular.woff) format("woff");font-style:normal;font-weight:400}@font-face{font-family:Nunito;src:url(assets/fonts/nunito/nunito-semibold.woff2) format("woff2"),url(assets/fonts/nunito/nunito-semibold.woff) format("woff");font-style:normal;font-weight:600}@font-face{font-family:Nunito;src:url(assets/fonts/nunito/nunito-bold.woff2) format("woff2"),url(assets/fonts/nunito/nunito-bold.woff) format("woff");font-style:normal;font-weight:700}@font-face{font-family:Nunito;src:url(assets/fonts/nunito/nunito-extrabold.woff2) format("woff2"),url(assets/fonts/nunito/nunito-extrabold.woff) format("woff");font-style:normal;font-weight:800}body{font-family:Nunito,Helvetica,Arial,sans-serif;line-height:1.7;color:#101010;background:url(assets/img/noise.png);background-color:#f5f5f5}p{font-size:1.6rem;font-weight:400}@media screen and (min-width:960px){p{font-size:1.8rem}}h1{color:#8089ce;color:var(--lila);font-size:6rem;font-weight:800;font-weight:var(--extrabold)}@media screen and (min-width:576px){h1{font-size:7rem}}.header{background:url(assets/img/headerbg/header_320.png);background-size:100%;background-repeat:no-repeat;display:grid;grid-gap:2.5rem;grid-template-rows:5rem repeat(4,auto);grid-template-areas:"lang" "title" "subtitle" "nav" "btn";padding:1.5rem}@media (min-width:400px){.header{background:url(assets/img/headerbg/header_400.png);background-size:100%;background-repeat:no-repeat}}@media screen and (min-width:576px){.header{-webkit-box-pack:center;justify-content:center;background:url(assets/img/headerbg/header_576.png);background-size:100%;background-repeat:no-repeat}}@media (min-width:700px){.header{background:url(assets/img/headerbg/header_700.png);background-size:100%;background-repeat:no-repeat}}@media screen and (min-width:960px){.header{background:url(assets/img/headerbg/header_960.png);background-size:100%;background-repeat:no-repeat;grid-template-columns:55% 45%;grid-template-rows:5rem auto auto 25rem auto;grid-template-areas:"img lang" "img title" "img subtitle" "img nav" "img btn"}}@media (min-width:1140px){.header{background:url(assets/img/headerbg/header_1140.png);background-size:100%;background-repeat:no-repeat}}.header__title{grid-area:title;background:url(assets/img/cirkels/headercirkel.png);background-repeat:no-repeat;background-size:100%;text-align:center;width:30rem;justify-self:center;margin-top:10rem}@media screen and (min-width:576px){.header__title{width:unset}}@media screen and (min-width:960px){.header__title{text-align:unset;width:35rem;justify-self:unset}}.header__lang{grid-area:lang;font-family:Aracne Condensed;font-size:3rem;justify-self:end;position:absolute;right:3rem;top:3rem;font-weight:700;letter-spacing:.2rem}.header__lang a{width:7rem;height:4rem;padding:1rem 2rem;color:#fff;text-decoration:none}.lang__nl{background:url(assets/img/buttons/lang_nl.png);background-size:100%;background-repeat:no-repeat;background-position:50%}.lang__fr{background:url(assets/img/buttons/lang_fr.png);background-size:100%;background-repeat:no-repeat;background-position:50%;margin-left:-1rem}.header__img{display:none;grid-area:img;height:40rem;justify-self:center;align-self:center}@media screen and (min-width:960px){.header__img{display:unset;height:50rem}}.header__subtitle{grid-area:subtitle;color:#4c5384;color:var(--donkerlila);font-size:2.4rem;text-align:center;font-weight:700;font-weight:var(--bold);line-height:3.6rem}@media screen and (min-width:576px){.header__subtitle{text-align:unset;width:38rem}}.header__nav{grid-area:nav;font-size:1.6rem;font-weight:600;font-weight:var(--semibold);margin:2rem 0 4rem;line-height:3.2rem}@media screen and (min-width:576px){.header__nav{text-align:unset;font-size:1.9rem;width:40rem}}@media screen and (min-width:960px){.header__nav{text-align:unset;width:40rem}}.header__navlink{color:#8089ce;color:var(--lila);text-decoration:none;border-bottom:.2rem solid #8089ce;border-bottom:.2rem solid var(--lila);font-weight:700}.header__btn{display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;grid-area:btn;background:url(assets/img/buttons/headerbutton.png);background-repeat:no-repeat;background-size:80% 82%;background-position:50%;width:35rem;height:7rem;justify-self:center;font-weight:700;-webkit-animation:zooming 5s infinite;animation:zooming 5s infinite;padding-top:.2rem;font-size:1.8rem;margin-left:4rem}@-webkit-keyframes zooming{0%{-webkit-transform:scale(1);transform:scale(1)}50%{-webkit-transform:scale(1.06);transform:scale(1.06)}to{-webkit-transform:scale(1);transform:scale(1)}}@keyframes zooming{0%{-webkit-transform:scale(1);transform:scale(1)}50%{-webkit-transform:scale(1.06);transform:scale(1.06)}to{-webkit-transform:scale(1);transform:scale(1)}}.overconnext__title{grid-area:title;color:#6ec8cd;color:var(--groen);padding-top:2rem;padding-bottom:1.2rem;position:relative}.overconnext__fotos{grid-area:fotos;position:relative;align-self:center;justify-self:flex-end;margin-top:4rem}.overconnext__text{grid-area:text;margin-bottom:2rem}.overconnext__btn{grid-area:btn;display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;-webkit-box-align:center;align-items:center;background:url(assets/img/buttons/overconnextbutton.png);background-repeat:no-repeat;background-size:100%;background-position:50%;width:43rem;height:7rem;font-weight:700;padding-top:.2rem;font-size:1.9rem;margin-left:-2.1rem;margin-top:2rem;-webkit-transform:scale(.98);transform:scale(.98)}.footer__about{grid-area:about;margin-left:2rem;justify-self:center}.footer__social{grid-area:social;display:-webkit-box;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center;justify-self:end;padding-right:3rem}.footer__contact{grid-area:contact;margin:3rem 0;z-index:900}.footer__sponsors{grid-area:sponsors;display:-webkit-box;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-flow:row wrap;-webkit-box-pack:justify;justify-content:space-between;justify-self:right;-webkit-transform:scale(1.1);transform:scale(1.1);margin-top:2.6rem;width:33rem;z-index:200}.footer__links{grid-area:links;display:-webkit-box;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-flow:row wrap;-webkit-box-pack:center;justify-content:center}
+  </style>
+  <link href="style.8a625f58a2a3478356d8.10f9924b.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="style.8a625f58a2a3478356d8.10f9924b.css" rel="stylesheet"></noscript>
+  <script>!function(n){"use strict";n.loadCSS||(n.loadCSS=function(){});var o=loadCSS.relpreload={};if(o.support=function(){var e;try{e=n.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),o.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},o.poly=function(){if(!o.support())for(var t=n.document.getElementsByTagName("link"),e=0;e<t.length;e++){var a=t[e];"preload"!==a.rel||"style"!==a.getAttribute("as")||a.getAttribute("data-loadcss")||(a.setAttribute("data-loadcss",!0),o.bindMediaToggle(a))}},!o.support()){o.poly();var t=n.setInterval(o.poly,500);n.addEventListener?n.addEventListener("load",function(){o.poly(),n.clearInterval(t)}):n.attachEvent&&n.attachEvent("onload",function(){o.poly(),n.clearInterval(t)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:n.loadCSS=loadCSS}("undefined"!=typeof global?global:this);</script></head>
+  <body>
+    <header class="header">
+      <div class="header__lang">
+        <a class="lang__nl" href>NL</a>
+        <a class="lang__fr" href>FR</a>
+      </div>
+      <img class="header__img" src="assets/img/postbus.png" alt="postbus voorlopig">
+      <h1 class="header__title">CONNEXT</h1>
+      <p class="header__subtitle">
+        De brievenbus vol slimme postkaartjes die een antwoord geeft op al jouw
+        vragen!
+      </p>
+      <p class="header__nav">
+        Binnen de
+        <a class="header__navlink scroll_eurometropool" href="#eurometropool">Eurometropool</a>
+        barst het van mensen die iets te vertellen hebben! Ben je benieuwd wat?
+        Kom het te weten via tal van
+        <a class="header__navlink scroll_connext" href="#overconnext">interactieve installaties</a>
+        in uw buurt, leer je medeburgers van net over de grens kennen, stuur hen
+        een kaartje en
+        <a class="header__navlink scroll_tracktrace" href="#trackandtrace">blijf dit kaartje op de voet volgen!</a>
+      </p>
+      <a class="header__btn btn__lila scroll_tracktrace" href="#trackandtrace">Waar is mijn kaartje?<span></span></a>
+    </header>
+
+    <main>
+      <div class="header-randje"></div>
+      <section class="overconnext" id="over">
+        <h2 class="overconnext__title">
+          Over <span class="title-highlight">CONNEXT</span><span class="overconnext__cirkel"></span>
+        </h2>
+        <div class="overconnext__fotos">
+          <img class="overconnext__bg" src="assets/img/overconnext/groenkaartje.png" alt="achtergrondkaartje">
+          <img class="overconnext__foto foto1" src="assets/img/overconnext/fotokaartje1.png" alt="voorgrondkaartje1">
+          <img class="overconnext__foto foto2" src="assets/img/overconnext/fotokaartje2.png" alt="voorgrondkaartje2">
+          <img class="overconnext__foto foto3" src="assets/img/overconnext/fotokaartje3.png" alt="voorgrondkaartje3">
+        </div>
+        <p class="overconnext__text">
+          CONNEXT is een project dat via
+          <strong>interactieve installaties</strong> de mensen binnen de
+          Eurometropool nauwer met elkaar wil verbinden. Via
+          <strong>digitale postkaartjes</strong> kan je op basis van een
+          <strong>vooropgesteld thema</strong> een boodschap of vraag de
+          metropool insturen. Tot je postkaartje weer terug bij jou terechtkomt,
+          kan je met een <strong>unieke code</strong> het traject volgen via
+          deze website.
+          <br>
+          <br>
+          <strong>De installaties zijn te vinden in cultuurhuizen, op evenementen en
+            op openbare plaatsen binnen de Eurometropool.</strong>
+        </p>
+        <a class="overconnext__btn btn__groen scroll_map" href>Bekijk hier waar de installaties staan<span></span></a>
+      </section>
+
+      <section class="tracktrace" id="trackandtrace">
+        <h2 class="tracktrace__title">
+          <span class="tracktrace__cirkel"></span>
+          <span class="title-highlight">Waar</span> is mijn verzonden kaartje?
+        </h2>
+        <p class="tracktrace__text">
+          Jouw kaartje bevindt zich momenteel binnen de
+          <strong class="down">Eurometropool</strong>.
+          <br>
+          Voer hier de <strong>unieke code</strong> in die je ontving bij het
+          versturen van je kaartje en ontdek het traject van uw kaartje via de
+          <strong>track and trace</strong>.
+        </p>
+        <form class="tracktrace__form" action>
+          <input class="form__input" type="text">
+          <input class="form__submit" type="submit" value="Kaartje zoeken">
+        </form>
+      </section>
+
+      <section class="eurometropool" id="eurometropool">
+        <h2 class="eurometropool__title">
+          Wat is de <span class="title-highlight">Eurometropool</span>?
+        </h2>
+        <img class="eurometropool__img" src="assets/img/kaart.gif" alt="Kaartje Eurometropool">
+        <p class="eurometropool__text">
+          De Eurometropool is een grensoverschrijdende samenwerking tussen de
+          regio’s van
+          <strong>Kortrijk, Lille, Doornik en Valenciennes</strong>. Deze
+          samenwerking wordt ondersteund door <strong>NEXT</strong>, een
+          jaarlijks kunstenfestival dat in elke regio plaatsvindt. Met CONNEXT
+          krijgen mensen uit de verschillende regio’s de kans om op een leuke
+          manier meer over elkaars leefwereld te weten te komen, om zo over de
+          land- en taalbarrières te kunnen kijken.
+        </p>
+        <a class="eurometropool__btn btn__lila" href="http://eurometropolis.eu/">Lees meer op de Eurometropolis website<span></span></a>
+      </section>
+
+      <section class="weetjes">
+        <div class="weetjes__envelop">
+          <h2 class="envelop__title">
+            Wat hebben de burgers van de Eurometropool allemaal te
+            <span>vertellen</span>?<span class="cirkel"></span>
+          </h2>
+          <p class="envelop__text">
+            De belangrijkste <strong>conclusies</strong> uit de postkaartjes
+            voor jou opgesomd per thema.<br>
+            <strong class="ontdekenleer">Ontdek en leer!</strong>
+          </p>
+          <div class="envelop__btns">
+            <button class="envelop__btn envelop__btn-active">
+              <img src="assets/img/buttons/weetjes_selected.png" alt="Culinair">
+              <p>Culinair</p>
+            </button>
+            <button class="envelop__btn">
+              <img src="assets/img/buttons/weetjes_unselected.png" alt="Actualiteit">
+              <p>Actualiteit</p>
+            </button>
+            <button class="envelop__btn">
+              <img src="assets/img/buttons/weetjes_unselected.png" alt="Kunst">
+              <p>Kunst</p>
+            </button>
+            <button class="envelop__btn">
+              <img src="assets/img/buttons/weetjes_unselected.png" alt="Toerisme">
+              <p>Toerisme</p>
+            </button>
+          </div>
+        </div>
+        <div class="weetjes__kaartje">
+          <div class="kaartje__answers">
+            <p class="answer answer1"></p>
+            <p class="answer answer2"></p>
+            <p class="answer answer3"></p>
+          </div>
+        </div>
+        <p class="kaartje__text">
+          <strong> Wil je ook iets vertellen?</strong>
+          <br>
+          Vind een installatie in de buurt en schrijf ook jouw kennis op een
+          postkaartje!
+        </p>
+      </section>
+
+      <section class="overnext" id="next">
+        <h2 class="overnext__title">
+          Over <span class="title-highlight">NEXT Festival</span><span class="overnextcirkel"></span>
+        </h2>
+        <div class="overnext__text">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et
+            rutrum ipsum, et rhoncus orci. Nunc pulvinar, enim vitae viverra
+            pretium, ligula est porta arcu, id sagittis diam nibh non arcu. Nunc
+            et purus ipsum. Proin sed dui condimentum, iaculis odio eget,
+            pellentesque erat. Nam dignissim mi sed nulla congue, vel volutpat
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et
+            rutrum ipsum, et rhoncus orci. Nunc pulvinar, enim vitae viverra
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et
+            rutrum ipsum, et rhoncus orci. Nunc pulvinar, enim vitae viverra
+            pretium, ligula est porta arcu, id sagittis diam nibh non arcu. Nunc
+            et purus ipsum. Proin sed dui condimentum, iaculis odio eget,
+            pellentesque erat. Nam dignissim mi sed nulla congue, vel volutpat
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et
+            rutrum ipsum, et rhoncus orci. Nunc pulvinar, enim vitae viverra
+          </p>
+        </div>
+        <a class="overnext__btn btn__lila" href="http://www.nextfestival.eu/">Lees meer over NEXT Festival<span></span></a>
+      </section>
+    </main>
+
+    <div class="map">
+      <div class="overlay-map"></div>
+      <div class="tekstballon">
+        <p>Er zijn momenteel <br><span>4 installaties</span> geplaatst!</p>
+        <p class="tekstballon-vraag">Vind je ze terug?</p>
+      </div>
+      <iframe class="mymap" src="https://www.google.com/maps/d/embed?mid=1vwQbRu6QbKIGKYqkukI-gia_qqujpcZe"></iframe>
+    </div>
+
+    <footer class="footer">
+      <div class="footer__about">
+        <h3>CONNEXT</h3>
+        <p>
+          is een initiatief van
+          <a href="https://www.nextfestival.eu/">vzw NEXT Kortrijk</a><br>
+          in samenwerking met <a href="https://devine.be/">Devine KASK</a>
+        </p>
+      </div>
+      <div class="footer__social">
+        <a href="https://www.facebook.com/Festival.NEXT/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAApCAYAAAA1bQl+AAAAxUlEQVRIiWO0r6hmIBIIMDAwxDMwMAQwMDAYQPnI4AEIsxBpWAEDA0M9FkOQgQIIE2PgAqjLiAJMRLiMaMMYCBgoAPUmSQCfgQkEwgwrwBeGDkTofwiNXTgg18CLUB9cQJfA52V+PHIN2AwjZCA+gNUwSgx8gEuCXANxgsFvIAs0efwnUZ89DvGPIAP3k+GQAzjED1Lbyx+obeCFURdSDC6Akg0jDlPwpU1cekZiXh41cNTAUQNHDaSPgfganI0km8bAwAAADvIbIRkbsxYAAAAASUVORK5CYII=" alt="facebook logo"></a>
+        <a href="https://www.instagram.com/nextfestival_eu/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAApCAYAAACoYAD2AAADDklEQVRYhcVZTW7TQBT+ihArFtMdO8IJcNdUijlBywmSnqBlh8Qi4QQkJ6g5QegJmkiwxt0j4dzAllixQoO+iR4vY8czsd1PsurYU78v7+d7b5wTABh/+IgGvADwBsBzAEnTwkD8BPAbwHee1+Jpw70UwIx/+0YBYA7gi8/OkxrjtwDuByJoMQKQAfgBwOibmqThwulA5DQS2v8vrTTJz5682wB4B+Ckh+PME+IRI7nzqCQ5VR6sAFwx5F+7dJdATpuW7FZct45a+EjO1AMumSdDICexStia0Ks7klN3gfgEYN0juZSF+Us4p6RjJGzF7yRI3qykq3uAdcZK5Nycoc7omAcAr3lvDOHJseCy5rfqk6SWGVkLmV7rPCn/KY8wbCNxoVKmZMHdqS/tc0DRYP9ZU8dpgylla0+ABfmS6bPkeU7ZmXDN1uVeHeo6ziEY5tVtA0EHQxL3QoOd7LzltaLpAbGeXIvklngQ4RyrewmJnpFU67SK8eTCQ9CG8hWJpDxOKWVS+1wEghBK0hq/Fp8rhuzGE7KSYU7oYYfkUA5qhJK8UZ+nLUS/4Drp0euG9UeRNJQZh01AT89VgzCe7tIJST1bhnYlvb71lB9CUj80dDIqVW62HqhjdTIWUe12aJJRCCGpxTd0/2OUwPci5vqhofsgXc29kCxU4k8CKtR4Jv/WhXesmK/UeOaDYc/Wk3/rIgoluaaIO4y4BZ3UrE/V9IOYyT9mCrpkPr3kZ+upjIbXYlOV1Hg5DZWiGJKl2ObKaci1urp2V4kvGIRYnSxIdNly/YaejdqBHiPmJQvJzpHvVa6CSrDkKJcemr6b4Av3oWrVsMYXHW6Dtf0/zpN34uIFHhf6HUDpSMpcMY/8Vk066Z/gO5KZmpx9b9f6huHuUyKTJEvP5LwakKjxiP7GRVhW91z1ZtdNZhHFFEJuwhdXuivtclNXd6q6iSM/5/Wu3xH5xr1KdyVNshSiq/fWQ4R+6+tKPjF3RK9UMfUNOxlZu3tts6l328qyxzkP+3tO17C/43zjYc/3AeAvWn2sM9DvBqkAAAAASUVORK5CYII=" alt="instagram logo"></a>
+      </div>
+      <div class="footer__contact">
+        <h3>Contact<span></span></h3>
+        <p>
+          <strong>Kapucijnenstraat 10<br>
+            8500 Kortrijk<br></strong>
+          info@nextfestival.eu<br>
+          056/221001
+        </p>
+      </div>
+      <ul class="footer__sponsors">
+        <li>
+          <a href="https://nextfestival.eu/">
+            <img src="assets/img/sponsors/nextfestival.png" alt="sponsor">
+          </a>
+        </li>
+        <li>
+          <a href="http://eurometropolis.eu/nl/">
+            <img src="assets/img/sponsors/eurometropool.png" alt="sponsor">
+          </a>
+        </li>
+        <li>
+          <a href="http://www.federation-wallonie-bruxelles.be/"><img src="assets/img/sponsors/fwb.png" alt="sponsor">
+          </a>
+        </li>
+        <li>
+          <a href="https://www.lillemetropole.fr/"><img src="assets/img/sponsors/mel.png" alt="sponsor">
+          </a>
+        </li>
+        <li>
+          <a href="https://www.hautsdefrance.fr/"><img src="assets/img/sponsors/hauts.png" alt="sponsor">
+          </a>
+        </li>
+        <li>
+          <a href="https://www.devine.be/"><img src="assets/img/sponsors/devine.png" alt="sponsor">
+          </a>
+        </li>
+        <li>
+          <a href="https://www.vlaanderen.be/">
+            <img src="assets/img/sponsors/vlaanderen.png" alt="sponsor">
+          </a>
+        </li>
+        <li>
+          <a href="http://www.valenciennes-metropole.fr/">
+            <img src="assets/img/sponsors/valenciennes.png" alt="sponsor" width="180" height="20">
+          </a>
+        </li>
+      </ul>
+      <ul class="footer__links">
+        <li class="link-shrink"><a href>Disclaimer</a></li>
+        <li class="link-shrink">
+          <a href="http://www.nextfestival.eu/nl/privacy-verklaring">Privacyverklaring</a>
+        </li>
+        <li class="link-shrink">
+          <a href="http://www.nextfestival.eu/nl/cookies-policy">Cookie policy</a>
+        </li>
+        <li class="link-grow copyright">
+          Bachelorproef Jarno, Kacim, Sofie - © 2020
+        </li>
+      </ul>
+    </footer>
+  <script type="text/javascript" src="main.2073e5855923863963f4.js"></script></body>
+</html>
