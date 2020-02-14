@@ -7,24 +7,31 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="./src/assets/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./src/assets/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./src/assets/favicon/favicon-16x16.png"
+      href="./assets/favicon/apple-touch-icon.png"
     />
     <link rel="manifest" href="./site.webmanifest" />
     <title>CONNEXT</title>
   </head>
   <body>
+    <div class="uitbreiding">
+      <div class="uitbreiding__content">
+        <img src="./assets/img/logo.gif" alt="logo CONNEXT" width="150" />
+
+        <p class="uitbreiding__title">Wij breiden volop uit!</p>
+        <p class="uitbreiding__subtitle">
+          Deze website van CONNEXT zal binnenkort beschikbaar zijn op uw
+          smartphone of tablet.
+        </p>
+        <p class="uitbreiding__text">
+          Kan je niet langer wachten? Ontdek de website dan op uw desktop.
+        </p>
+      </div>
+      <img
+        src="./assets/img/sponsors/mobilesponsors.png"
+        alt="logo CONNEXT en eurometropool"
+        class="mobilesponsors"
+      />
+    </div>
     <header class="header">
       <div class="header__lang">
         <a class="lang__nl" href="">NL</a>
@@ -32,10 +39,11 @@
       </div>
       <img
         class="header__img"
-        src="./assets/img/postbus.png"
-        alt="postbus voorlopig"
+        src="./assets/img/header.gif"
+        alt="postbus installatie"
       />
-      <h1 class="header__title">CONNEXT</h1>
+      <h1 class="header__logo"><span class="hide">CONNEXT</span></h1>
+
       <p class="header__subtitle">
         De brievenbus vol slimme postkaartjes die een antwoord geeft op al jouw
         vragen!
@@ -59,6 +67,7 @@
       <a class="header__btn btn__lila scroll_tracktrace" href="#trackandtrace"
         >Waar is mijn kaartje?<span></span
       ></a>
+      <span class="pijl-scrolldown"></span>
     </header>
 
     <main>
@@ -103,10 +112,10 @@
           <br />
           <strong
             >De installaties zijn te vinden in cultuurhuizen, op evenementen en
-            op openbare plaatsen binnen de Eurometropool.</strong
+            op openbare plekken binnen de Eurometropool.</strong
           >
         </p>
-        <a class="overconnext__btn btn__groen scroll_map" href=""
+        <a class="overconnext__btn btn__groen scroll_map" href="#map"
           >Bekijk hier waar de installaties staan<span></span
         ></a>
       </section>
@@ -124,15 +133,17 @@
           versturen van je kaartje en ontdek het traject van uw kaartje via de
           <strong>track and trace</strong>.
         </p>
-        <form class="tracktrace__form" action="">
+        <form class="tracktrace__form" action="#">
           <input class="form__input" type="text" />
-          <input class="form__submit" type="submit" value="Kaartje zoeken" />
+          <button class="form__submit"><span>Kaartje zoeken</span></button>
         </form>
       </section>
 
       <section class="eurometropool" id="eurometropool">
         <h2 class="eurometropool__title">
-          Wat is de <span class="title-highlight">Eurometropool</span>?
+          Wat is de <span class="title-highlight">Eurometropool</span>?<span
+            class="eurometropool__cirkel"
+          ></span>
         </h2>
         <img
           class="eurometropool__img"
@@ -169,28 +180,48 @@
             <button class="envelop__btn envelop__btn-active">
               <img
                 src="./assets/img/buttons/weetjes_selected.png"
-                alt="Culinair"
+                alt="culinair"
+              />
+              <img
+                src="./assets/img/buttons/culinair-icon.png"
+                alt="culinair"
+                class="culinair"
               />
               <p>Culinair</p>
             </button>
             <button class="envelop__btn">
               <img
                 src="./assets/img/buttons/weetjes_unselected.png"
-                alt="Actualiteit"
+                alt="actualiteit"
+              />
+              <img
+                src="./assets/img/buttons/actualiteit-icon.png"
+                alt="actualiteit"
+                class="actualiteit"
               />
               <p>Actualiteit</p>
             </button>
             <button class="envelop__btn">
               <img
                 src="./assets/img/buttons/weetjes_unselected.png"
-                alt="Kunst"
+                alt="kunst"
+              />
+              <img
+                src="./assets/img/buttons/kunst-icon.png"
+                alt="kunst"
+                class="kunst"
               />
               <p>Kunst</p>
             </button>
             <button class="envelop__btn">
               <img
                 src="./assets/img/buttons/weetjes_unselected.png"
-                alt="Toerisme"
+                alt="toerisme"
+              />
+              <img
+                src="./assets/img/buttons/toerisme-icon.png"
+                alt="toerisme"
+                class="toerisme"
               />
               <p>Toerisme</p>
             </button>
@@ -206,7 +237,7 @@
         <p class="kaartje__text">
           <strong> Wil je ook iets vertellen?</strong>
           <br />
-          Vind een installatie in de buurt en schrijf ook jouw kennis op een
+          Vind een installatie in de buurt en schrijf jouw kennis ook op een
           postkaartje!
         </p>
       </section>
@@ -218,22 +249,25 @@
         </h2>
         <div class="overnext__text">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et
-            rutrum ipsum, et rhoncus orci. Nunc pulvinar, enim vitae viverra
-            pretium, ligula est porta arcu, id sagittis diam nibh non arcu. Nunc
-            et purus ipsum. Proin sed dui condimentum, iaculis odio eget,
-            pellentesque erat. Nam dignissim mi sed nulla congue, vel volutpat
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et
-            rutrum ipsum, et rhoncus orci. Nunc pulvinar, enim vitae viverra
+            NEXT is een jaarlijks drieweeks
+            <strong>internationaal podiumkunstenfestival</strong> binnen de
+            Eurometropool Lille-Kortrijk-Tournai en Valenciennes en bestaat
+            sinds <strong>2008</strong>. Het is een samenwerkingsplatform van
+            internationale topartiesten en coproduceert ook innovatief nieuw
+            werk. NEXT wordt gemaakt door <strong>zes cultuurhuizen</strong> uit
+            de Vlaams-Waals-Franse Eurometropool (Schouwburg Kortrijk,
+            Kunstencentrum BUDA Kortrijk, La Maison de la Culture van Doornik,
+            La Rose des Vents Scène Nationale Lille Métropole,
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et
-            rutrum ipsum, et rhoncus orci. Nunc pulvinar, enim vitae viverra
-            pretium, ligula est porta arcu, id sagittis diam nibh non arcu. Nunc
-            et purus ipsum. Proin sed dui condimentum, iaculis odio eget,
-            pellentesque erat. Nam dignissim mi sed nulla congue, vel volutpat
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et
-            rutrum ipsum, et rhoncus orci. Nunc pulvinar, enim vitae viverra
+            Espace Pasolini, Le Phénix Valenciennes) en zij bundelen hun kennis
+            en middelen om een totaalprogramma te bekomen van internationale
+            podiumkunsten zoals
+            <strong>theater, dans en performance art</strong>. Het
+            kunstenfestival wil een belangrijke rol spelen in de groei van de
+            nieuwe, grensoverschrijdende metropool en daarom tracht het steeds
+            meer de volledige Eurometropool te bespelen en het festival dichter
+            te brengen bij al haar inwoners.
           </p>
         </div>
         <a class="overnext__btn btn__lila" href="http://www.nextfestival.eu/"
@@ -242,7 +276,7 @@
       </section>
     </main>
 
-    <div class="map">
+    <div class="map" id="map">
       <div class="overlay-map"></div>
       <div class="tekstballon">
         <p>Er zijn momenteel <br /><span>4 installaties</span> geplaatst!</p>
@@ -256,7 +290,7 @@
 
     <footer class="footer">
       <div class="footer__about">
-        <h3>CONNEXT</h3>
+        <h3><span class="hide">CONNEXT</span></h3>
         <p>
           is een initiatief van
           <a href="https://www.nextfestival.eu/">vzw NEXT Kortrijk</a><br />
@@ -325,6 +359,7 @@
               alt="sponsor"
               width="180"
               height="20"
+              class="valenciennes"
             />
           </a>
         </li>

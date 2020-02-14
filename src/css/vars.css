@@ -8,7 +8,7 @@
   --lichtgrijs: whitesmoke;
   --semibold: 600;
   --bold: 700;
-  --extrabold: 800;
+  --extrabold: 900;
 }
 
 @custom-media --xs screen and (min-width: 0);

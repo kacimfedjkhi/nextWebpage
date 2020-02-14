@@ -58,7 +58,7 @@ import "./style.css";
   };
 
   const handleClickLink = e => {
-    e.preventDefault();
+    // e.preventDefault();
     const $clickedLink = e.currentTarget;
     if ($clickedLink.classList.contains(`scroll_eurometropool`)) {
       document.querySelector(`.eurometropool`).scrollIntoView({
@@ -128,7 +128,7 @@ import "./style.css";
   const init = () => {
     setInterval(() => {
       rotatePhotos();
-    }, 3000);
+    }, 5000);
 
     //eventlisteners
     const $btns = document.querySelectorAll(`.envelop__btn`);
